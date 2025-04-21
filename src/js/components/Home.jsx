@@ -1,28 +1,33 @@
-import React from "react";
+import Navbar from './Navbar';
+import Jumbotron from './Jumbotron';
+import Card from './Card';
+import Footer from './Footer';
+import img from './../../img/big-project-image.png'
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
-
-//create your first component
 const Home = () => {
-	return (
-		<div className="text-center">
-            
+    return (
+        <>
+            <Navbar />
+            <Jumbotron />
+            <div className="container d-flex justify-content-center align-items-center">
+                <div className="row">
+                    <div className="col-md-3">
+                        <Card title={"CardTitle1"} text={"Lorem ipsum, dolor sit amet consectetur adipisicing elit."} button={"Findout More"} img ={img}/>
+                    </div>
+                    <div className="col-md-3">
+                        <Card title="CardTitle2" text="Recusandae ullam itaque voluptas ducimus laboriosam mollitia aut hic." button="Findout More"img ={img}/>
+                    </div>
+                    <div className="col-md-3">
+                        <Card title="CardTitle3" text="Nostrum eum obcaecati non repudiandae placeat laboriosam cupiditate possimus." button="Findout More"img ={img}/>
+                    </div>
+                    <div className="col-md-3">
+                        <Card title="CardTitle4" text="voluptas neque accusantium pariatur quia ex optio officiis rerum." button="Findout More" img ={img}/>
+                    </div>
+                </div>
+            </div>
+            <Footer />
+        </>
+    )
+}
 
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
-		</div>
-	);
-};
-
-export default Home;
+export default Home
